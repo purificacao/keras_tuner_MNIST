@@ -1,4 +1,4 @@
-# PoC showing how to set up Keras Tuner for fine tune CNN hyperparameters: a computer vision task.
+# PoC showing how to set up Keras Tuner to fine tune CNN hyperparameters: a computer vision task.
 
 This repository compares the results given by the three available Classes in keras Tuner library, which are: 
 
