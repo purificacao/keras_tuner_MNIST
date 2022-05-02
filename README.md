@@ -10,9 +10,9 @@ For this example, I am using the MNIST dataset, which is composed of 60,000 28x2
 
 |Keras Tuner Class|search_time|accuracy| 
 |-----|-------|------| 
-|RandomSearch|00:34:48|0.9893| 
-|Hyperband|01:29:39|0.9915|
-|BayesianOptimization|00:17:53|0.9901|
+|RandomSearch|00:35:23|0.99089| 
+|Hyperband|01:35:09|0.9898|
+|BayesianOptimization|00:18:07|0.9901|
 
 As one can see, the `RandomSearch` class returned the best results, taking 1/3 of the time taken by the `Hyperband` class and twice as long as the time taken by the `BayesianOptimization` class. Of course, every optimizer algorithm has its on hyperparameter to be tuned as best as one can. What I mean is, there could be a model built with a set of hyperparameters of the `Hyperband` class that would beat the others two, but something to not is how fast the `BayesianOptimization` is compared to the other two, for the chosen set of hyperparameters, returning results as good. Thus, for this very case, I would totally try and fine tune other hyperparameters of the model using the `BayesianOptimization` class!
 
