@@ -14,17 +14,15 @@ For this example, I am using the MNIST dataset, which is composed of 60,000 28x2
 |Hyperband|01:29:39|0.9915|
 |BayesianOptimization|00:17:53|0.9901|
 
-As one can see, the Hyperband Class returned the best results, but had a way longer searching time, whilst BayesianOptimization Class took only 18 minutes (almost) and returned the second best result. Of course, the results achieved here are data and parameter dependent, which means, each of the three classes can achieve great results. All it takes is to set up proper configurations of its parameters. For example, maybe the RandomSearch class could give better results with higher max_trials and higher executions_per_trial, and so on. Another thing to notice is that the hyperband and Bayesian classes return the same best hyperparameters combinations for the CNN, while the Random Class returned a slightly different combination.
+As one can see, the `RandomSearch` class returned the best results, taking 1/3 of the time taken by the `Hyperband` class and twice as long as the time taken by the `BayesianOptimization` class. Of course, every optimizer algorithm has its on hyperparameter to be tuned as best as one can. What I mean is, there could be a model built with a set of hyperparameters of the `Hyperband` class that would beat the others two, but something to not is how fast the `BayesianOptimization` is compared to the other two, for the chosen set of hyperparameters, returning results as good. Thus, for this very case, I would totally try and fine tune other hyperparameters of the model using the `BayesianOptimization` class!
 
 ## Requirements:
 
- - tensorflow==2.1
+ - tensorflow==2.3
  - loguru==0.4.0
  - keras-tuner==1.0.1
- - numpy==1.16.2
+ - numpy==1.19.5
  - matplotlib==3.0.3
-
-
 
 ```python
 
